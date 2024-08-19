@@ -1,0 +1,322 @@
+/* ************
+Fonts
+************* */
+@font-face {
+    font-family: "betterfly-draft";
+    src: url("../fonts/betterfly-draft.woff2") format("woff2"),
+        url("../fonts/betterfly-draft.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "betterfly-narrow";
+    src: url("../fonts/betterfly-narrow.woff2") format("woff2"),
+        url("../fonts/betterfly-narrow.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Crimson Text";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Crimson Text Italic"), local("CrimsonText-Italic"),
+        url("../fonts/crimsonText_Italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Crimson Text";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Crimson Text Bold"), local("CrimsonText-Bold"),
+        url("../fonts/crimsonText_Bold.woff2") format("woff2");
+}
+
+/* ********************
+Root variables
+********************* */
+:root {
+    --color-text: #3d3d3d;
+    --color-primary: #067E0A;
+    --color-accent: #613b6b;
+
+    --ff-title: "betterfly-narrow", sans-serif;
+    --ff-serif: "Crimson Text", serif;
+    --ff-logo: "betterfly-draft", sans-serif;
+}
+
+/* ******************
+Whole document
+****************** */
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-serif);
+    color: var(--color-text);
+    font-size: 1.25rem;
+    overflow-X: hidden;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+img{
+    display: block;
+    max-width:100%;
+}
+section{
+    padding: 3em 1em;
+}
+/***************
+Border Box
+************* */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h2,
+h3 {
+    font-family: var(--ff-title);
+    line-height: 0.8;
+    /* font-size: 5rem; */
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+p{
+    margin-bottom: 0.85em;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+.section-title-small{
+    font-size: 3rem;
+}
+.section-title-small small{
+    font-size: 0.7em;
+    /* line-height: 0.7; */
+    display: block;
+}
+.text-primary{
+    color: var(--color-primary);
+}
+.logo{
+    font-family: var(--ff-logo);
+    text-align: center;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+/* navigation -------------------------------------- */
+header{
+    padding: 1em 0 2em;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a{
+    display: inline-block;
+    padding: 0.5rem;
+    color: var(--color-primary);
+     text-decoration: none;
+}
+nav a:hover,
+nav a:focus{
+    color: var(--color-accent);
+    text-decoration: underline;
+    display: inline-block;
+}
+/* buttons ------------------------------------ */
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.btn{
+    padding: 0.75em 2.5em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5em 0;
+    border-radius: 0.35em;
+}
+/* .btn + .btn{
+    margin-left: 0.5em;
+} */
+.btn-primary{ 
+    background: var(--color-primary);
+}
+ /* Homepage styles -------------------------------- */
+.hero{
+    background-color: #333;
+    background-image: url(../img/hcn.png);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 15vh 1em;
+    margin:1%;
+}
+/* 
+.intro{
+    text-align: center;
+} */
+
+.about-us{
+    background: var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin:1%;
+}
+.about-us_intro{
+background-image: url(../img/granola.png);
+background-blend-mode: multiply;
+background-color: #515050;
+padding: 3em 1em 1.5em;
+border-radius: 0.3em;
+background-size: cover;
+}
+.about-us_body{
+    padding: 1.5em 1em 3em;
+}
+
+.order-online{
+    background: #f0f0f0;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+.product{
+    /* background: #f0f0f0; */
+    /* padding: 1em; */
+    border-radius: 1em;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    box-shadow: 0 0 1em rgba(0,0,0,0.1);
+}
+.product_content{
+    padding: 1.5em;
+}
+.product-title{
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+/* .fineprint{
+    font-size: 0.5rem;
+} */
+
+footer{
+    background: #333;
+    /* padding: 3em 1em; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin:1%;
+}
+footer a{
+    color:inherit;
+}
+.footer-nav{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.footer-nav a{
+    padding: 0.5em;
+    text-decoration: none;
+}
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+/* ------------------------------------------ */
+@media only screen and (min-width:750px){
+    section{
+        padding: 6em 1em;
+    }
+    .btn-group{
+        margin-top: 2em;
+        flex-direction: row;
+    }
+    .btn + .btn{
+        margin-left: 0.5em;
+    }
+    .about-us{
+        flex-direction: row;
+    }
+    .about-us_intro,
+    .about-us_body{
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4em 2em;
+    }
+    .about-us_intro{
+        text-align: right;
+    }
+    .about-us_intro > *{
+        max-width: 27rem;
+        margin-left: auto;
+    }
+    .about-us_body{
+        text-align: left;
+    }
+    .about-us_body > *{
+        max-width: 27rem;
+        margin-right: auto;
+    }
+    .order-online > *{
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .order-online{
+        display: grid;
+    }
+
+    .products{
+        flex-direction: row;
+        max-width: 95%;
+        padding: 0 5em;
+    }
+    .product{
+        margin: 0;
+        flex:0 1 33%;
+    }
+    .product + .product{
+        margin-left: 1em;
+    }
+}
