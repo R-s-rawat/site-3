@@ -174,7 +174,7 @@ nav a:focus{
 }
  /* Homepage styles -------------------------------- */
 .hero{
-    background-color: #333;
+    background-color: #bcbcbc;
     background-image: url(../img/hcn.png);
     background-blend-mode: multiply;
     background-attachment: fixed;
@@ -199,7 +199,7 @@ nav a:focus{
 .about-us_intro{
 background-image: url(../img/granola.png);
 background-blend-mode: multiply;
-background-color: #515050;
+background-color: #bcbcbc;
 padding: 3em 1em 1.5em;
 border-radius: 0.3em;
 background-size: cover;
