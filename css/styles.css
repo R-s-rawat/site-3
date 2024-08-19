@@ -99,6 +99,10 @@ p{
     margin-bottom: 0.85em;
 }
 
+strong{
+    color: black;
+}
+
 p:last-child{
     margin-bottom: 0;
 }
